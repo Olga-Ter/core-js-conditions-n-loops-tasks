@@ -607,7 +607,7 @@ function getNearestBigger(number) {
       else rightArr.push(numArr[x]);
     }
 
-    numStr = leftArr.join('') + rightArr.toSorted((a, b) => a - b).join('');
+    numStr = leftArr.join('') + rightArr.sort((a, b) => a - b).join('');
   }
   return i === 0 ? number : Number(numStr);
 }
